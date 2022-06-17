@@ -98,18 +98,18 @@ class MODEL:
         print(df)
     
         
-
-obj = MODEL()
-while True:
-    querry = input('Enter your querry: ')
-    if querry == 'create':
-        obj.create_model()
-    if querry == 'train':
-        obj.train_model()
-    if querry == 'test':
-        obj.test_model()
-    if querry == 'load':
-        obj.load_model()
-    if querry == 'exit':
-        break
-print('process exterminated')
+if __name__ == '__main__':
+    obj = MODEL()
+    while True:
+        querry = input('Enter your querry: ')
+        if querry == 'create':
+            obj.create_model()
+        if querry == 'train':
+            obj.train_model()
+        if querry == 'test':
+            obj.test_model()
+        if querry == 'load':
+            obj.load_model()
+        if querry == 'exit':
+            break
+    print('process exterminated')
