@@ -33,20 +33,20 @@ class MODEL:
         H1 = tf.keras.layers.Dense(64, activation='swish')(H1)
         H1 = tf.keras.layers.Dense(32, activation='swish')(H1)
 
-        H2 = tf.keras.layers.Conv2D(16, kernel_size=5, padding='same', activation='swish')(X)
+        H2 = tf.keras.layers.Conv2D(16, kernel_size=9, padding='same', activation='swish')(X)
         H2 = tf.keras.layers.MaxPool2D()(H2)
 
-        H2 = tf.keras.layers.Conv2D(32, kernel_size=5, activation='swish')(H2)
+        H2 = tf.keras.layers.Conv2D(32, kernel_size=9, activation='swish')(H2)
         H2 = tf.keras.layers.MaxPool2D()(H2)
 
         H2 = tf.keras.layers.Flatten()(H2)
         H2 = tf.keras.layers.Dense(64, activation='swish')(H2)
         H2 = tf.keras.layers.Dense(32, activation='swish')(H2)
 
-        H3 = tf.keras.layers.Conv2D(16, kernel_size=7, padding='same', activation='swish')(X)
+        H3 = tf.keras.layers.Conv2D(16, kernel_size=11, padding='same', activation='swish')(X)
         H3 = tf.keras.layers.MaxPool2D()(H3)
 
-        H3 = tf.keras.layers.Conv2D(32, kernel_size=7, activation='swish')(H3)
+        H3 = tf.keras.layers.Conv2D(32, kernel_size=11, activation='swish')(H3)
         H3 = tf.keras.layers.MaxPool2D()(H3)
 
         H3 = tf.keras.layers.Flatten()(H3)
